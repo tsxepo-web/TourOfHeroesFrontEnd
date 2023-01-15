@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Top Heroes</h2>
+    <div class="heroes-menu">
+        <a *ngFor="let hero of heroes"  class="btn text-secondary" href="#">{{hero.name}} </a>
+        <hr>
+    </div>
+        <div class="row">  
+            <div class="col-md-6 bg-primary">          
+                <div class="card text-center">
+                    <img src="http://wallpaperset.com/w/full/0/e/2/465533.jpg" alt="Card image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title" >Generate a Random Hero</h5>
+                        <p class="card-text" *ngIf="randomHero">You have choosen <span class="text-primary">{{randomHero.name}} </span>as your Hero. Goodluck!</p>
+                        <button (click)="getRandomHero()" href="#" class="btn btn-secondary">Generate Hero</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">          
+                <div class="card text-center">
+                    <img src="https://mythcreants.com/wp-content/uploads/2015/09/the-gentlemen.jpg" alt="picture oa a villain" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Choose a Villain</h5>
+                        <p class="card-text">
+                            <select [(ngModel)]="battleVillain">
+                                <option *ngFor="let villain of villains">{{villain.name}}</option>
+                            </select>
+                        </p>
+                    </div>
+                    <button class="btn btn-success" (click)="startBattle()">Start Battle</button>
+                </div>
+            </div>
+            <p *ngIf="results">{{results}}</p>
+    </div>
+    <br>
+    <div>
+        <h3 class="text-danger">Rules Of Angagement.</h3>
+        <p class="text-secondary"> There are no rules!!.
+        </p>
+    </div>
+</div>
