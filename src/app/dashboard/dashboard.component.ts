@@ -42,7 +42,7 @@ export class DashboardComponent implements OnInit {
     const hero = this.randomHero;
     const villain = this.battleVillain;
     if ((villain.length > 5)) {
-      this.results =  "You have won";
+      this.results =  "You have won the game";
       return this.results;
     }
     this.results = "You lost the game";
