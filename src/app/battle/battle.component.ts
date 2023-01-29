@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { InMemoryDataService } from '../in-memory-data.service';
+//import { InMemoryDataService } from '../in-memory-data.service';
 
 @Component({
   selector: 'app-battle',
