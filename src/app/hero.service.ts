@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Hero } from './hero';
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
-  private heroesUrl = 'https://tourofheroesbackendtjabane.azurewebsites.net//api/heroes';
+  private heroesUrl = 'https://tourofheroesbackendtjabane.azurewebsites.net/api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
