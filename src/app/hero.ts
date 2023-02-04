@@ -1,7 +1,8 @@
 export interface Hero {
     id: number,
     name: string,
-    power: string,
-    weatherboost: boolean,
-    isHero: boolean,
+    powers: number,
+    weatherboost: number,
+    powelevel: number;
+    isVillain: boolean,
 }

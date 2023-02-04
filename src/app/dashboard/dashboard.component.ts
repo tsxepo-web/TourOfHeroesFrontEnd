@@ -24,12 +24,12 @@ export class DashboardComponent implements OnInit {
 
   getHeroes(): void {
     this.heroService.getHeroes().subscribe(heroes =>
-      this.heroes = heroes.filter(x => x.isHero === true).slice(0, 10))
+      this.heroes = heroes.filter(x => x.isVillain === false).slice(0, 10))
   }
 
   getVillains(): void {
     this.heroService.getHeroes().subscribe(heroes =>
-      this.villains = heroes.filter(x => x.isHero === false))
+      this.villains = heroes.filter(x => x.isVillain === true))
   }
 
   getRandomHero(): void {
