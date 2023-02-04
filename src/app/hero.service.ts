@@ -7,7 +7,7 @@ import {HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HeroService {
-  private heroesUrl = 'https://tourofheroesbackendtjabane.azurewebsites.net';
+  private heroesUrl = 'https://tourofheroesbackendtjabane.azurewebsites.net/api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
