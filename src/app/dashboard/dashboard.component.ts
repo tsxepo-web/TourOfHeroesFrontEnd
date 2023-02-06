@@ -34,7 +34,7 @@ export class DashboardComponent implements OnInit {
 
   getRandomHero(): void {
     const id = Math.floor((Math.random() * this.heroes.length) + 1);
-    const hero =  this.heroService.getHero(id).subscribe(hero =>
+    const hero =  this.heroService.getHero(id, "Durban").subscribe(hero =>
       this.randomHero = hero);
   }
 

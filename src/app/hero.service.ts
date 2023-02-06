@@ -21,8 +21,8 @@ export class HeroService {
     return this.http.get<Hero[]>(this.heroesUrl);
   }
 
-  getHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
+  getHero(id: number, location: string = "Durban"): Observable<Hero> {
+    const url = `${this.heroesUrl}/${id}?location=location`;
     return this.http.get<Hero>(url);
   }
 
