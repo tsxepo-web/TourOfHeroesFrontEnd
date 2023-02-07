@@ -1,8 +1,13 @@
 <div class="container">
     <h2>Top Heroes</h2>
-    <div class="heroes-menu">
+    <div class="col">
         <a *ngFor="let hero of heroes"  class="btn text-secondary" href="#">{{hero.name}} </a>
+        <div class="flex">
+            <h5 class="card-title">Enter Battle City</h5>
+            <input [(ngModel)]="location">      
+        </div>
         <hr>
+        
     </div>
         <div class="row">  
             <div class="col-md-6 bg-primary">          
@@ -19,20 +24,15 @@
                 <div class="card text-center">
                     <img src="https://mythcreants.com/wp-content/uploads/2015/09/the-gentlemen.jpg" alt="picture oa a villain" class="card-img-top">
                     <div class="card-body">
-                        <h5 class="card-title">Choose a Villain</h5>
-                        <p class="card-text">
-                            <select [(ngModel)]="battleVillain">
-                                <option *ngFor="let villain of villains" [ngValue]="villain">{{villain.name}}</option>
-                            </select>
-                            {{battleVillain | json}}
-                        </p>
-                        <h5 class="card-title">Enter Battle City</h5>
-                        <input [(ngModel)]="location">
+                        <h5 class="card-title">Generate a Random Villain</h5>
+                        <p class="card-text" *ngIf="randomVillain">Are you sure you want fight <span class="text-danger">{{randomVillain.name}}?</span> if not generate another Villain</p>
+                        <button (click)="getRandomVillain()" href="#" class="btn btn-secondary">Generate VIllain</button>
                     </div>
                     <button class="btn btn-success" (click)="startBattle()">Start Battle</button>
                 </div>
             </div>
             <p *ngIf="results">{{results}}</p>
+            <p *ngIf="score" class="text-danger">{{score}}</p>
     </div>
     <br>
     <div>

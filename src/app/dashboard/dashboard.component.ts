@@ -11,9 +11,11 @@ export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
   villains: Hero[] = [];
   results: string = "";
-  battleVillain = {} as Hero;
   location: string = "";
+  score: string = "";
+  @Input() randomVillain = {} as Hero;
   @Input() randomHero = {} as Hero;
+
 
   constructor(private heroService: HeroService){}
  
@@ -21,6 +23,7 @@ export class DashboardComponent implements OnInit {
     this.getHeroes();
     this.getVillains();
     this.getRandomHero();
+    this.getRandomVillain()
   }
 
   getHeroes(): void {
@@ -39,10 +42,25 @@ export class DashboardComponent implements OnInit {
       this.randomHero = hero);
   }
 
+  getRandomVillain(): void {
+    const id = Math.floor((Math.random() * this.villains.length) + 6);
+    const villain =  this.heroService.getHero(id, this.location).subscribe(villain =>
+      this.randomVillain = villain);
+  }
+
   startBattle(): string {
     const hero = this.randomHero;
-    const villain = this.battleVillain;
-    this.results = this.location;
+    const villain = this.randomVillain;
+    if (hero.weatherboost > villain.weatherboost){
+      this.results = "You have won the Game";
+    }
+    else if (hero.weatherboost < villain.weatherboost){
+      this.results = "You have lost the Game";
+    }
+    else this.results = "Its a draw";
+    const heroScore = hero.weatherboost.toString();
+    const villainScore = villain.weatherboost.toString();
+    this.score = "Hero Score: " + heroScore + " " + "," + "Villain Score: " + villainScore;
     return this.results;
   }
 
