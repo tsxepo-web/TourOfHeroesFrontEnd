@@ -3,6 +3,6 @@ export interface Hero {
     name: string,
     powers: number,
     weatherboost: number,
-    powelevel: number;
+    powerlevel: number;
     isVillain: boolean,
 }
