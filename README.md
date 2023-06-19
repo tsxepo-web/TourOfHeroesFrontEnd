@@ -4,22 +4,23 @@
 
 ![Design](https://github.com/tsxepo-web/TourOfHeroesFrontEnd/blob/master/Design.drawio.png)
 
-## About the project
+## Tour of the Heroes Frontend
 
-- This project is created for a simple Hero vs Villain game.
-- You choose a Hero, Villain and City.
+- A player chooses a city to battle.
 - The temperature of the city will be used to score the characters based on their powers.
-
-## Presentation Layer UI
-
-Angular is used for the front end.
-
-## Cloud
-
+  -Then a player generates random Hero and villain and starts the battle.
 - Azure Static Web App is used to host the frontend.
-- Azure App Services is used to host the backend.
-- Azure Cosmos DB is used to host data.
-- Github Workflows is used for CI/CD and Actions to track the deployments.
+
+## Tour of the Heroes Api
+
+-This is the server code used for the fuctionality of the game.
+-Please check the Backend Url to view the code.
+
+## Mongodb
+
+-this is the database of the project used to map the heroes model.
+-Uses cosmosdb to host the data.
+-Please also check the Backend Url for more information.
 
 ## Author
 
