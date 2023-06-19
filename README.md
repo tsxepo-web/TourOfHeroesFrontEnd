@@ -8,19 +8,19 @@
 
 - A player chooses a city to battle.
 - The temperature of the city will be used to score the characters based on their powers.
-  -Then a player generates random Hero and villain and starts the battle.
+- Then a player generates random Hero and villain and starts the battle.
 - Azure Static Web App is used to host the frontend.
 
 ## Tour of the Heroes Api
 
--This is the server code used for the fuctionality of the game.
--Please check the Backend Url to view the code.
+- This is the server code used for the fuctionality of the game.
+- Please check the Backend Url to view the code.
 
 ## Mongodb
 
--this is the database of the project used to map the heroes model.
--Uses cosmosdb to host the data.
--Please also check the Backend Url for more information.
+- This is the database of the project used to map the heroes model.
+- Uses cosmosdb to host the data.
+- Please also check the Backend Url for more information.
 
 ## Author
 
