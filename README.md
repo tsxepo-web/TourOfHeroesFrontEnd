@@ -1,27 +1,35 @@
-# TourOfHeroesFrontEnd
+<h1 align="center">Welcome to TourOfHeroes 👋</h1>
+<p>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
-## Development server
+## About the project
+* This project is created for a simple Hero vs Villain game.
+* You choose a Hero, Villain and City.
+* The temperature of the city will be used to score the characters based on their powers.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Presentation Layer UI
+Angular is used for the front end.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Cloud
+* Azure Static Web App is used to host the frontend.
+* Azure App Services is used to host the backend.
+* Azure Cosmos DB is used to host data.
+* Github Workflows is used for CI/CD and Actions to track the deployments. 
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Author
 
-## Running unit tests
+👤 **tsxepo**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* Github: [@tsxepo-web](https://github.com/tsxepo-web)
+* Backend Url: [HeroesApi](https://tourofheroesbackendtjabane.azurewebsites.net/api/heroes)
+* Frontend Url: [TourOfHeroes](https://salmon-tree-09b222d00.2.azurestaticapps.net)
 
-## Running end-to-end tests
+## Show your support
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Give a ⭐️ if this project helped you!
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
